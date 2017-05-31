@@ -58,7 +58,7 @@ if (collumNumber!=6)
     textView.setText((listOfOperation.get(position)));
     textView.setTextSize(30);
 
-    textView.setLayoutParams(new GridView.LayoutParams(130,130));
+    //textView.setLayoutParams(new GridView.LayoutParams(130,130));
     textView.setGravity(Gravity.CENTER);
     textView.setLayoutParams(new GridView.LayoutParams((int)context.getResources().getDimension(R.dimen.gridview),(int)context.getResources().getDimension(R.dimen.gridview)));
     return textView;
@@ -69,25 +69,21 @@ else
     ImageView imageView = new ImageView(context);
 
 
-    //imageView = (ImageView) View.inflate(context,R.layout.one_element, null);
-    if (listOfOperation.get(position).equals("ok")) {
-
-        //imageView.setImageResource(R.drawable.car0);
-
+   if (listOfOperation.get(position).equals("ok")) {
         imageView.setImageResource(R.drawable.ok);
-
-    } else if (listOfOperation.get(position).equals("bad")) {
+    }
+   else if (listOfOperation.get(position).equals("bad")) {
         imageView.setImageResource(R.drawable.bad);
     } else
     {
-
-        imageView.setImageResource(R.drawable.empty);
-        //imageView.setAnimation(R.mipmap.ic_launcher);
+          imageView.setImageResource(R.drawable.empty);
     }
-    imageView.setLayoutParams(new GridView.LayoutParams(130,130));
-    imageView.setLayoutParams(new GridView.LayoutParams((int)context.getResources().getDimension(R.dimen.gridview),(int)context.getResources().getDimension(R.dimen.gridview)));
+
+    //imageView.setLayoutParams(new GridView.LayoutParams(130,130));
+  imageView.setLayoutParams(new GridView.LayoutParams((int)context.getResources().getDimension(R.dimen.gridview),(int)context.getResources().getDimension(R.dimen.gridview)));
 
     return imageView;
+
 }
 
     }

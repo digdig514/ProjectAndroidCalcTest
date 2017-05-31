@@ -92,11 +92,9 @@ CustomNumberAdapter customAdapterOperation;
                         listallOfOperation.set(position+1, "bad");
                         noObj.setResult("bad");
                     }
-                //listallOfOperation.set(position, String.valueOf(noObj.getUserResult()));
-                   // listallOfOperation.set(position, String.valueOf(noObj.getResult()));
                 customAdapterOperation.notifyDataSetChanged();
+                    editTextResult.setText("");
             }
-            //}
 
 
         } else
